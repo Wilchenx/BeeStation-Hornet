@@ -242,7 +242,21 @@
 
 /obj/item/clothing/head/sombrero/shamebrero/Initialize()
 	. = ..()
-	add_trait(TRAIT_NODROP, SHAMEBRERO_TRAIT)
+	ADD_TRAIT(src, TRAIT_NODROP, SHAMEBRERO_TRAIT)
+
+/obj/item/clothing/head/flatcap
+	name = "flat cap"
+	desc = "A working man's cap."
+	icon_state = "flat_cap"
+	item_state = "detective"
+
+/obj/item/clothing/head/hunter
+	name = "bounty hunting hat"
+	desc = "Ain't nobody gonna cheat the hangman in my town."
+	icon_state = "hunter"
+	item_state = "hunter"
+	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
+	resistance_flags = FIRE_PROOF | ACID_PROOF
 
 /obj/item/clothing/head/cone
 	desc = "This cone is trying to warn you of something!"
@@ -344,6 +358,11 @@
 	icon_state = "nemes_headdress"
 	icon_state = "nemes_headdress"
 
+/obj/item/clothing/head/delinquent
+	name = "delinquent hat"
+	desc = "Good grief."
+	icon_state = "delinquent"
+
 /obj/item/clothing/head/frenchberet
 	name = "french beret"
 	desc = "A quality beret, infused with the aroma of chain-smoking, wine-swilling Parisians. You feel less inclined to engage military conflict, for some reason."
@@ -367,3 +386,36 @@
 		if(prob(3))
 			M += pick(" Honh honh honh!"," Honh!"," Zut Alors!")
 	return trim(M)
+
+/obj/item/clothing/head/clownmitre
+	name = "Hat of the Honkmother"
+	desc = "It's hard for parishoners to see a banana peel on the floor when they're looking up at your glorious chapeau."
+	icon_state = "clownmitre"
+
+/obj/item/clothing/head/kippah
+	name = "kippah"
+	desc = "Signals that you follow the Jewish Halakha. Keeps the head covered and the soul extra-Orthodox."
+	icon_state = "kippah"
+
+/obj/item/clothing/head/medievaljewhat
+	name = "medieval Jew hat"
+	desc = "A silly looking hat, intended to be placed on the heads of the station's oppressed religious minorities."
+	icon_state = "medievaljewhat"
+
+/obj/item/clothing/head/taqiyahwhite
+	name = "white taqiyah"
+	desc = "An extra-mustahabb way of showing your devotion to Allah."
+	icon_state = "taqiyahwhite"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
+
+/obj/item/clothing/head/taqiyahred
+	name = "red taqiyah"
+	desc = "An extra-mustahabb way of showing your devotion to Allah."
+	icon_state = "taqiyahred"
+	pocket_storage_component_path = /datum/component/storage/concrete/pockets/small
+
+/obj/item/clothing/head/intern
+	name = "\improper CentCom Head Intern beancap"
+	desc = "A horrifying mix of beanie and softcap in CentCom green. You'd have to be pretty desperate for power over your peers to agree to wear this."
+	icon_state = "intern_hat"
+	item_state = "intern_hat"
